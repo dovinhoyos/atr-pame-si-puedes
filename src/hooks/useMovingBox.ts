@@ -28,7 +28,7 @@ export const useMovingBox = (isPlaying: boolean) => {
     };
 
     const interval = setInterval(moveBox, 800);
-    moveBox(); // mover inmediatamente
+    moveBox(); 
 
     return () => clearInterval(interval);
   }, [isPlaying]);

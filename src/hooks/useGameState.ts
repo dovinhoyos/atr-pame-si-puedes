@@ -15,6 +15,8 @@ export const useGameState = () => {
 
   const resetGame = () => {
     setIsPlaying(false);
+    setScore(0);
+    setTimeLeft(GAME_DURATION);
   };
 
   const handleHit = () => {
