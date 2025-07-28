@@ -6,6 +6,7 @@ import { StartButton } from "../components/StartButton";
 import { MovingBox } from "../components/MovingBox";
 import { GameHUD } from "../components/GameHUD";
 import { GameOverScreen } from "../components/GameOverScreen";
+import { ScoreBoard } from "../components/ScoreBoard";
 
 export const GamePage = () => {
   const { isPlaying, startGame, handleHit, resetGame, score, timeLeft } =
@@ -28,7 +29,8 @@ export const GamePage = () => {
       {isGameOver ? (
         <GameOverScreen score={score} onRestart={handleRestart} />
       ) : !isPlaying ? (
-        <div className="flex items-center justify-center h-full">
+        <div className="flex items-center justify-center h-fullflex flex-col items-center justify-center h-full space-y-6">
+          <ScoreBoard />
           <StartButton onStart={startGame} />
         </div>
       ) : (
